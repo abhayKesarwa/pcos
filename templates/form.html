@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="../static/css/form.css">
+</head>
+<body>
+    <form action="/predict" method="post">
+
+    <section>
+        <!-- 1.Age input -->
+        <div class="container">
+            <p>1. How old are you ?</p>
+            <input name="age" type="number" placeholder="Age(Years)" value="" required>
+        </div>
+
+        <!-- 2. Weight input -->
+        <div class="container">
+            <p>2. What is your Weight ?</p>
+            <input name="weight" type="number" placeholder="Weight(Kilograms)" onchange="bmi_calc()" id="wight" value="" >
+        </div>
+
+        <!-- 3. Height input -->
+        <div class="container">
+            <p>3. What is your Height ?</p>
+            <input name="height" type="number" placeholder="Height(centimeter)" onchange="bmi_calc()" id="height" value="" >
+        </div>
+
+        <!-- 4. Bmi input -->
+        <div class="container">
+            <p>4. What is your BMI ?</p>
+            <input name="bmi" type="text" placeholder="Body mass ratio" value=""  id="bmi"  >
+        </div>
+
+        <!-- 5. Blood group input -->
+        <div class="container">
+            <p>5. Select your Blood group ?</p>
+            <select id="blood" name="blood">
+                <option value="11">A+</option>
+                <option value="12">A-</option>
+                <option value="13">B-</option>
+                <option value="14">B+</option>
+                <option value="15">A+</option>
+                <option value="16">AB+</option>
+                <option value="17">O+</option>
+                <option value="18">O-</option>
+                <option value="19">AB-</option>
+            </select>
+        </div>
+
+        <!-- 6. Pulse input -->
+        <div class="container">
+            <p>6. What is your Pulse Rate ?</p>
+            <input name="pulse" type="number" placeholder="Pulse (per minute)"  value="" >
+        </div>
+
+        <!-- 7. Breathe input -->
+        <div class="container">
+            <p>7. What is your Breath Rate ?</p>
+            <input name="Breath" type="number" placeholder="Breath(per minute)" value="" >
+        </div>
+
+        <!-- 8. Hemoglobin input -->
+        <div class="container">
+            <p>8. What is your Hemoglobin ?</p>
+            <input name="hemoglobin" type="number" placeholder="Hemoglobin"  value="" >
+        </div>
+
+        <!-- 9. Cycle Length input -->
+        <div class="container">
+            <p>9. What is your Cycle Length ?</p>
+            <input name="cyclelength" type="number" placeholder="Cycle Length"  value="" >
+        </div>
+
+        <!-- 10. Hip input -->
+        <div class="container">
+            <p>10. What is your Hip size ?</p>
+            <input name="hip" type="number" placeholder="Hip size(inch)" onchange="hw_calc()" id="hip" value="" >
+        </div>
+
+        <!-- 11. Waist input -->
+        <div class="container">
+            <p>11. What is your Waist size ?</p>
+            <input name="waist" type="number" placeholder="Waist size(inch)" onchange="hw_calc()" id="waist" value="" >
+        </div>
+
+        <!-- 12. Hip Waist ratio input -->
+        <div class="container">
+            <p>12. Hip Waist ratio ?</p>
+            <input name="hip waist" type="text" placeholder="Hip Waist ratio" value=""  id="hw"  >
+        </div>
+
+        <!-- 13. Weight gain input -->
+        <div class="container">
+            <p>13. Do you have weight gain ?</p>
+            <label>
+                <input type="radio" value="1" name="weightgain">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="weightgain">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 14. Hair growth input -->
+        <div class="container">
+            <p>14. Hair growth ?</p>
+            <label>
+                <input type="radio" value="1" name="hairgrowth">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="hairgrowth">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 15. Skin darkening input -->
+        <div class="container">
+            <p>15. Skin darkening ?</p>
+            <label>
+                <input type="radio" value="1" name="skindarkening">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="skindarkening">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 16. Hair loss input -->
+        <div class="container">
+            <p>16. Hair loss ?</p>
+            <label>
+                <input type="radio" value="1" name="hairloss">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="hairloss">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 17. Pimples input -->
+        <div class="container">
+            <p>17. Do you have Pimples ?</p>
+            <label>
+                <input type="radio" value="1" name="pimples">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="Pimples">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 18. Fast food input -->
+        <div class="container">
+            <p>18. Do you eat Fast Food ?</p>
+            <label>
+                <input type="radio" value="1" name="fastfood">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="fastfood">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <!-- 19. Reg Exercise input -->
+        <div class="container">
+            <p>19. Do you exercise regularly ?</p>
+            <label>
+                <input type="radio" value="1" name="exercise">
+                <span class="check"></span>
+                Yes
+            </label>
+    
+            <label>
+                <input type="radio" value="0" name="exercise">
+                <span class="cross"></span>
+                No
+            </label>
+        </div>
+
+        <input type="submit" value="submit">
+
+    </section>
+
+    </form>
+</body>
+<script src="../static/script/form.js"></script>
+</html>
